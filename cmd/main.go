@@ -30,12 +30,13 @@ func main() {
 		MaxAge:           12 * time.Hour,                                      // 设置缓存预检请求的时间
 	}
 
-	// 设置 CORS 中间件
+	// Setup CORS middleware
 	g.Use(cors.New(corsConfig))
-
 	g.Use(middleware.RequestIDMiddleware())
+
 	log.SetFlags(0)
 	log.SetOutput(os.Stdout)
+
 	routes.ApiService(g)
 
 	db.Connect()

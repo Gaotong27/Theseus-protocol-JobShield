@@ -7,7 +7,7 @@ import (
 
 const XRequestIDKey = "XRequestID"
 
-// RequestIDMiddleware 生成唯一请求 ID 并将其存储在上下文中
+// RequestIDMiddleware Generate a unique request ID and store it in the context
 func RequestIDMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		requestID := uuid.New().String()

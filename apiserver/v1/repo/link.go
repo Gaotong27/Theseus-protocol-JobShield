@@ -12,9 +12,9 @@ type AddLinkReq struct {
 }
 
 type ServerList struct {
-	ServerName     string `json:"serverName"`     // 源ip
-	LastTime       string `json:"lastTime"`       // 最后回连时间
-	ReTimeInterval string `json:"reTimeInterval"` // 预计延长时间
+	ServerName     string `json:"serverName"`
+	LastTime       string `json:"lastTime"`
+	ReTimeInterval string `json:"reTimeInterval"`
 }
 
 type QueryLinkSafeReq struct {
